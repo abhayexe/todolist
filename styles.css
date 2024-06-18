@@ -1,0 +1,109 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: url('background2.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.blurred-rectangle {
+    width: 320px;
+    background: rgba(0, 0, 0, 0.422);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list {
+    width: 100%;
+    text-align: center;
+}
+
+.todo-list h2 {
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    /* outline: 5px dotted green; */
+}
+
+#task-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    background: rgb(255, 255, 255);  
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: rgb(0, 0, 0);             
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    outline: none;                    
+}
+
+#add-task-btn {
+    padding: 10px;
+    background: rgba(0, 249, 62, 0.998);
+    border: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#add-task-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+#task-list li {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: move;
+}
+
+#task-list li .task-number {
+    background: rgb(8, 97, 187);
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    margin-right: 10px;
+}
+
+#task-list li button {
+    background: rgb(255, 0, 200);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: auto;
+}
+
+#task-list li button:hover {
+    background: rgba(255, 0, 0, 0.8);
+}
